@@ -4,8 +4,9 @@ import type React from "react"
 import dynamic from "next/dynamic"
 import { useCallback, useState, useEffect } from "react"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, CheckCircle } from "lucide-react"
 import { motion } from "framer-motion"
+import { YouTubeEmbed } from "@/components/ui/youtube-embed"
 
 const DotShaderBackground = dynamic(
   () => import("@/components/ui/dot-shader-background").then((mod) => ({ default: mod.DotShaderBackground })),
@@ -108,6 +109,24 @@ export function HeroSection() {
                 How the System Works
               </Link>
             </motion.div>
+          </motion.div>
+
+          {/* Featured Video */}
+          <motion.div variants={itemVariants} className="mt-16 max-w-4xl mx-auto">
+            <YouTubeEmbed videoId="6PlJWXvzrBY" title="How the PodLab System Works" />
+          </motion.div>
+
+          {/* Bullet points */}
+          <motion.div
+            variants={itemVariants}
+            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10"
+          >
+            {["Duplicate your best sales moves", "Build trust at speed", "Scale without adding workload"].map((point) => (
+              <div key={point} className="flex items-center gap-3">
+                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-foreground font-medium">{point}</span>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
       </div>
