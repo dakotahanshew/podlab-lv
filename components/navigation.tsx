@@ -51,6 +51,7 @@ export function Navigation() {
               width={180}
               height={48}
               priority
+              loading="eager"
             />
           </Link>
 
