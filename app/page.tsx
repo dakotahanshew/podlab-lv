@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/home/hero-section"
 import { ProblemSection } from "@/components/home/problem-section"
 import { SystemSection } from "@/components/home/system-section"
 import { WhyPodlabSection } from "@/components/home/why-podlab-section"
+import { ScenesSection } from "@/components/home/scenes-section"
 import { FeaturedVideoSection } from "@/components/home/featured-video-section"
 import { SocialProofSection } from "@/components/home/social-proof-section"
 import { DifferenceSection } from "@/components/home/difference-section"
@@ -44,6 +45,7 @@ export default function HomePage() {
       <ProblemSection />
       <SystemSection />
       <WhyPodlabSection />
+      <ScenesSection />
       <FeaturedVideoSection />
       <SocialProofSection />
       <DifferenceSection />
